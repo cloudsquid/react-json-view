@@ -1,7 +1,7 @@
 {
-  "name": "@microlink/react-json-view",
+  "name": "@cloudsquid/react-json-view",
   "description": "Interactive react component for displaying javascript arrays and JSON objects.",
-  "homepage": "https://github.com/microlinkhq/react-json-view",
+  "homepage": "https://github.com/cloudsquid/react-json-view",
   "version": "1.26.2",
   "main": "dist/main.js",
   "author": {
@@ -179,10 +179,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/microlinkhq/react-json-view.git"
+    "url": "git+https://github.com/cloudsquid/react-json-view.git"
   },
   "bugs": {
-    "url": "https://github.com/microlinkhq/react-json-view/issues"
+    "url": "https://github.com/cloudsquid/react-json-view/issues"
   },
   "keywords": [
     "array-viewer",
@@ -299,22 +299,9 @@
       ]
     }
   },
-  "nano-staged": {
-    "*.js": [
-      "prettier-standard",
-      "standard --fix"
-    ],
-    "package.json": [
-      "finepack"
-    ]
-  },
   "peerDependencies": {
     "react": ">= 15",
     "react-dom": ">= 15"
-  },
-  "simple-git-hooks": {
-    "commit-msg": "npx commitlint --edit",
-    "pre-commit": "npx nano-staged"
   },
   "standard": {
     "globals": [
@@ -322,6 +309,7 @@
       "it"
     ],
     "ignore": [
+      "Demo.js",
       "demo/dist",
       "dev-server"
     ]

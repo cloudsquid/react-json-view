@@ -177,7 +177,7 @@ class Demo extends React.PureComponent {
         )}
         <div class='rjv-demo'>
           <div class='rjv-header'>
-            <div class='header-1'>@microlink/react-json-view</div>
+            <div class='header-1'>@cloudsquid/react-json-view</div>
           </div>
           <ReactJson
             name={false}
@@ -273,9 +273,9 @@ class Demo extends React.PureComponent {
     )
   }
 
-  getNotes = (on_edit_enabled, on_add_enabled) => {
+  getNotes = (onEditEnabled, onAddEnabled) => {
     const notes = []
-    if (on_edit_enabled) {
+    if (onEditEnabled) {
       notes.push(
         <span>
           To edit a value, try <Code>ctrl/cmd + click</Code> enter edit mode
@@ -293,7 +293,7 @@ class Demo extends React.PureComponent {
         </span>
       )
     }
-    if (on_add_enabled) {
+    if (onAddEnabled) {
       notes.push(
         <span>
           When adding a new key, try <Code>Enter</Code> to submit

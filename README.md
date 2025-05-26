@@ -31,13 +31,13 @@
 ### Installation
 
 ```shell
-npm install @microlink/react-json-view --save
+npm install @cloudsquid/react-json-view --save
 ```
 
 ### Usage
 
 ```js
-import ReactJsonView from '@microlink/react-json-view'
+import ReactJsonView from '@cloudsquid/react-json-view'
 
 <ReactJsonView src={{
   string: 'this is a test string',
@@ -159,7 +159,7 @@ Check [react-json-view.microlink.io](https://react-json-view.microlink.io/) to s
 
 **rjv** supports any base-16 theme. You can supply your own base-16 theme object.
 
-To better understand custom themes, take a look at [my example implementation](https://github.com/microlinkhq/react-json-view/blob/7c154b9a7d83ea89dce2c171ebdf4d163ff49233/dev-server/src/index.js#L135) and the [base-16 theme styling guidelines](https://github.com/chriskempson/base16/blob/master/styling.md).
+To better understand custom themes, take a look at [microlink's implementation](https://github.com/microlinkhq/react-json-view/blob/7c154b9a7d83ea89dce2c171ebdf4d163ff49233/dev-server/src/index.js#L135) and the [base-16 theme styling guidelines](https://github.com/chriskempson/base16/blob/master/styling.md).
 
 ## License
 

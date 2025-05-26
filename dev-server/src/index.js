@@ -12,10 +12,10 @@ import JsonViewer from './../../src/js/index'
 // custom big number class, You can use existing libraries like `bignumber.js`, `decimal.js`, `big.js` etc.
 class BigNumber {
   name = 'customName'
-  constructor(value) {
+  constructor (value) {
     this.value = value
   }
-  toString() {
+  toString () {
     return this.value.toString()
   }
 }
@@ -64,6 +64,7 @@ ReactDom.render(
         return false
       }}
       defaultValue=''
+      searchTerm='Apr'
     />
 
     <br />
