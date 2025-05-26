@@ -130,9 +130,16 @@ class RjvObject extends React.PureComponent {
   }
 
   getObjectMetaData = src => {
-    const { rjvId, theme } = this.props
+    const { rjvId, theme, namespace } = this.props
     const { size, hovered } = this.state
-    return <VariableMeta rowHovered={hovered} size={size} {...this.props} />
+    return (
+      <VariableMeta
+        rowHovered={hovered}
+        size={size}
+        namespace={namespace}
+        {...this.props}
+      />
+    )
   }
 
   getBraceStart (object_type, expanded) {

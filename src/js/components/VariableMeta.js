@@ -105,10 +105,12 @@ export default class extends React.PureComponent {
       theme,
       onDelete,
       onAdd,
+      onSelect,
       enableClipboard,
       src,
       namespace,
-      rowHovered
+      rowHovered,
+      name
     } = this.props
     return (
       <div
@@ -116,20 +118,29 @@ export default class extends React.PureComponent {
         class='object-meta-data'
         onClick={e => {
           e.stopPropagation()
+          if (onSelect !== false) {
+            const location = [...namespace]
+            location.shift()
+            location.pop()
+            onSelect({
+              name: name,
+              value: src,
+              namespace: location,
+              type: toType(src)
+            })
+          }
         }}
       >
         {/* size badge display */}
         {this.getObjectSize()}
         {/* copy to clipboard icon */}
-        {enableClipboard
-          ? (
-            <CopyToClipboard
-              rowHovered={rowHovered}
-              clickCallback={enableClipboard}
-              {...{ src, theme, namespace }}
-            />
-            )
-          : null}
+        {enableClipboard ? (
+          <CopyToClipboard
+            rowHovered={rowHovered}
+            clickCallback={enableClipboard}
+            {...{ src, theme, namespace }}
+          />
+        ) : null}
         {/* copy add/remove icons */}
         {onAdd !== false ? this.getAddAttribute(rowHovered) : null}
         {onDelete !== false ? this.getRemoveObject(rowHovered) : null}

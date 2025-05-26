@@ -299,9 +299,22 @@
       ]
     }
   },
+  "nano-staged": {
+    "*.js": [
+      "prettier-standard",
+      "standard --fix"
+    ],
+    "package.json": [
+      "finepack"
+    ]
+  },
   "peerDependencies": {
     "react": ">= 15",
     "react-dom": ">= 15"
+  },
+  "simple-git-hooks": {
+    "commit-msg": "npx commitlint --edit",
+    "pre-commit": "npx nano-staged"
   },
   "standard": {
     "globals": [
@@ -310,6 +323,8 @@
     ],
     "ignore": [
       "Demo.js",
+      "Object.js",
+      "VariableMeta.js",
       "demo/dist",
       "dev-server"
     ]
