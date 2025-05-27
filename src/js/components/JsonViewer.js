@@ -6,10 +6,11 @@ import filterSrc from './../helpers/filterSrc'
 export default class extends React.PureComponent {
   render = () => {
     const { props } = this
+    let src = props.src
     if (props.searchTerm) {
       // Filter the src object based on the search term
-      props.src = filterSrc(props.src, props.searchTerm)
-      if (!props.src) {
+      src = filterSrc(src, props.searchTerm)
+      if (!src) {
         return <div class='no-results'>No results found</div>
       }
     }
@@ -23,19 +24,23 @@ export default class extends React.PureComponent {
     }
 
     if (
-      Array.isArray(props.src) &&
+      Array.isArray(src) &&
       props.groupArraysAfterLength &&
       props.src.length > props.groupArraysAfterLength
     ) {
       ObjectComponent = ArrayGroup
     }
 
-    console.log(this.props.searchTerm)
-
     return (
       <div class='pretty-json-container object-container'>
         <div class='object-content'>
-          <ObjectComponent namespace={namespace} depth={0} jsvRoot {...props} />
+          <ObjectComponent
+            namespace={namespace}
+            depth={0}
+            jsvRoot
+            {...props}
+            src={src}
+          />
         </div>
       </div>
     )
