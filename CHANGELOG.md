@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.28.1](https://github.com/cloudsquid/react-json-view/compare/v1.28.0...v1.28.1) (2025-05-27)
+
+
+### Bug Fixes
+
+* fix bug of editing props directly ([83dcbc5](https://github.com/cloudsquid/react-json-view/commit/83dcbc5257829042f7af238d0b057e7bcbc1ad82))
+
 ## 1.28.0 (2025-05-26)
 
 
